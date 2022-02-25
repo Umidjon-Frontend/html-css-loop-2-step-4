@@ -1,5 +1,6 @@
 body{
     background-color: #55557e;
+    font-family: Roboto, sans-serif;
 }
 
 *{
@@ -13,6 +14,9 @@ div.activ{
     background-color: #252525;
     box-shadow: 0 0 10px #252525;
 }
+div.activ:hover{
+    background-color: #252525;
+}
 div.activ img{
     opacity: 1;
 }
@@ -21,7 +25,9 @@ div.activ img{
     max-width: 374px;
     margin: 100px auto;
 }
-
+.menu-header{
+    margin-bottom: 25px;
+}
 .menu-nav{
     display: flex;
     justify-content: flex-start;
@@ -30,6 +36,7 @@ div.activ img{
 }
 .menu-nav-item img{
     opacity: 0.5;
+    transition: all 0.3s linear;
 }
 
 .menu-nav-item{
@@ -40,7 +47,82 @@ div.activ img{
     align-items: center;
     background-color: #3d3e52;
     margin-right: 1px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.menu-nav-item:hover{
+    background-color: #333444;
+}
+.menu-nav-item:hover img{
+    opacity: 1;
 }
 .menu-nav-item:last-child{
     margin-right: 0;
 }
+
+.menu-card{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.menu-card__header{
+    width: 100%;
+    height: 150px;
+    padding: 85px 0 22px 22px;
+    background-image: url(img/food.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px 5px 0 0;
+}
+.menu-card__header-title{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.menu-card__header-location{
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+}
+.menu-card__header-location img{
+    width: 15px;
+}
+.location-title{
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.menu-card__section{
+    width: 100%;
+    height: 235px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #dedede;
+    border-radius: 0 0 5px 5px;
+}
+.menu-card__section-item{
+    width: 100%;
+    height: 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 20px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+.menu-card__section-item:last-child{
+    border-radius: 0 0 5px 5px;
+}
+.item-title-number{
+    transition: all 0.1s linear;
+}
+.menu-card__section-item:hover .item-title-number{
+    color: #333;
+    transform: scale(1.2);
+}
+
